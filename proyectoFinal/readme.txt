@@ -1,3 +1,5 @@
+0 - Deploy --> https://coderbackproyecto-production.up.railway.app
+
 1 - Al archivo PROFES.env, estan las varaibles de entorno, cambiar el nombre a ".env"
 
 2 - En la mayoria de los casos (salvo los users creados por la tutora Mayra), la contraseña para loggearse es "123" (incluso para loggearse con adminCoder@coder.com)
