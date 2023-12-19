@@ -41,7 +41,7 @@ const init = () => {
 
         clientID: process.env.GITHUB_CLIENT_ID,
         clientSecret: process.env.GITHUB_CLIENT_SECRET,
-        callbackURL: '/api/sessions/login/github/callback',
+        callbackURL: `${process.env.URL_DOMAIN}/api/sessions/login/github/callback`,
       },
 
       async (_accessToken, _refreshToken, profile, done) => {
