@@ -6,8 +6,8 @@ const GitHubStrategy = require('passport-github2')
 const { factoryManager } = require('./process.config')
 const userManager = factoryManager.userManager
 const cartManager = factoryManager.cartManager
-console.log("CallBackURL")
-console.log(`${process.env.URL_DOMAIN}/api/sessions/login/github/callback`)
+//console.log("CallBackURL")
+//console.log(`${process.env.URL_DOMAIN}/api/sessions/login/github/callback`)
 const {
   LocalStrategy,
   signup,
