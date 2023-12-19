@@ -22,7 +22,7 @@ class SessionController {
 
   //ruta get('/login/github/callback')
   static githubCb = passport.authenticate('github', {
-    failureRedirect: '/login',
+    failureRedirect: '/singup',
   })
 
   static logout = async (req, res = response) => {
