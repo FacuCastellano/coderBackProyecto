@@ -9,18 +9,20 @@ function socketManager(socket) {
   //console.log(`user has connected: ${socket.id}`)
 
   socket.on('message', async (msg) => {
-    if (socket.request.user.role === 'user') {
+    if (
+      socket.request.user.role === 'user' ||
+      socket.request.user.role === 'premium'
+    ) {
       //console.log("flag 1")
       await messageManager.add(msg)
       socket.broadcast.emit('message', msg)
-    }else if (socket.request.user.role === 'admin'){
+    } else if (socket.request.user.role === 'admin') {
       //cleconsole.log("flag 2")
-      socket.emit("alertMsg",{
+      socket.emit('alertMsg', {
         alertCode: 1,
-        message: "Admins can't write in chat"
+        message: "Admins can't write in chat",
       })
     }
-    
   })
 
   socket.on('disconnect', () => {
